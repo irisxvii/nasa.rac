@@ -1,4 +1,5 @@
-function Footer() {
+function Footer(props) {
+  const {showModal, handleToggleModal} = props
   
     return (
         <footer>
@@ -7,7 +8,9 @@ function Footer() {
             <h2>The Wallpaper</h2>
             <h1>APOD PROJECT</h1>
           </div>
-          <button><i className="fa-solid fa-circle-info"></i></button>
+          <button onClick={handleToggleModal}>
+            <i className="fa-solid fa-circle-info"></i>
+          </button>
         </footer>
     )
   }
