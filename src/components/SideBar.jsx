@@ -9,6 +9,9 @@ function SideBar() {
           <p>description</p>
           <p>sbauycg ashvytfcdc gwuefhewvfn hsvctycv</p>
         </div>
+        <button>
+        <i className="fa-solid fa-arrow-right"></i>
+        </button>
         </div>
       </div>
     )
