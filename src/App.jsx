@@ -4,6 +4,8 @@ import Main from './components/Main'
 import SideBar from './components/SideBar'
 
 function App() {
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(false)
   const [showModal, setShowModal] = useState(false)
 
 function handleToggleModal() {
@@ -17,8 +19,9 @@ useEffect(() => {
     `?api_key=${NASA_KEY}`
     try {
       const res = await fetch(url)
-      const data = await res.json()
-      console.log('DATA\n',data)
+      const apiData = await res.json()
+      setData(apiData)
+      console.log('DATA\n',apiData)
     } catch (error) {
       console.log(error.message)
     }
@@ -28,11 +31,16 @@ useEffect(() => {
 
   return (
     <>
-      <Main />
-      {showModal && (
-        <SideBar handleToggleModal={handleToggleModal} /> 
+      {data ? (<Main data={data}/>) : (
+        <div className='loadingState'>
+          <i className="fa-solid fa-gear"></i>
+        </div>
       )}
-      <Footer handleToggleModal={handleToggleModal}/>
+      {showModal && (
+        <SideBar data={data} handleToggleModal={handleToggleModal} /> 
+      )}
+      { data && (
+        <Footer data={data} handleToggleModal={handleToggleModal}/>) }
     </>
   )
 }

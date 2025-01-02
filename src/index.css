@@ -114,6 +114,11 @@ footer button:hover {
   background: #030615;
 }
 
+.sidebarContents h2{
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+
 .sidebarContents div {
   flex: 1;
 }
@@ -126,11 +131,22 @@ footer button:hover {
   margin-right: auto;
   cursor: pointer;
   transition-duration: 200ms;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .sidebarContents button:hover {
   opacity: .7;
+}
+
+.descContainer{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.descTitle {
+ font-size: .9rem; 
+ font-weight: 200;
 }
 
 @media (min-width: 640px){
@@ -143,5 +159,27 @@ footer button:hover {
 
   .sidebarContents{
     margin: unset;
+  }
+}
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.loadingState i{
+  opacity: .2;
+  animation: spin 1s linear infinite;
+  font-size: 3rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

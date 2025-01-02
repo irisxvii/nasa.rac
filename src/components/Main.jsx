@@ -1,8 +1,8 @@
-function Main() {
-  
+function Main(props) {
+  const {data} = props  
     return (
       <div className="imgContainer">
-        <img src="wall.jpg" alt="wallpaper-demo" className="bgImage" />
+        <img src={data.hdurl} alt={data.title} className="bgImage" />
       </div>
     )
   }
