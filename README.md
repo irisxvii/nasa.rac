@@ -1,9 +1,5 @@
+![an apod project](https://github.com/user-attachments/assets/10b381a1-364e-457c-977b-7f619c85be3c)
 
-
-
-
-
-![nasanotion](https://github.com/user-attachments/assets/f5e65cb8-48c0-4dc0-b757-bf3569f32d2f)
 
 # nasa.rac
 ## (It's my first time working w API's SO DONT JUDGE. Also my first proper React project)
