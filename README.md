@@ -6,17 +6,18 @@
 ![nasanotion](https://github.com/user-attachments/assets/f5e65cb8-48c0-4dc0-b757-bf3569f32d2f)
 
 # nasa.rac
-Long Description about project. This project do that. This project is awesome...
-## Team members
-[me](https://github.com/TH-Activities/saturday-hack-night-template)
-## Link to product walkthrough
-[link to video](Link Here)
-## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
+## (It's my first time working w API's SO DONT JUDGE. Also my first proper React project)
+A simple website which uses NASA's APOD API to fetch and display the daily astronomy image along with its title and description
 ## Libraries used
-Library Name - Version
-## How to configure
-Instructions for setting up project
-## How to Run
-Instructions for running
+- React + Vite
+- Font Awesome
+## Installation
+- clone this repo
+- install dependencies
+ ```
+  npm install
+```
+- create a .env file and add your api key
+- run
+```
+npm run dev
